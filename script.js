@@ -484,6 +484,8 @@ const products = [
 let cart = [];
 let wishlist = [];
 let currentView = 'grid';
+let currentUser = null;
+let userOrders = [];
 
 function renderProducts(filteredProducts = products) {
     const productsGrid = document.getElementById('productsGrid');
@@ -937,6 +939,14 @@ function placeOrder(event) {
         window.location.href = emailURL;
     }
     
+    userOrders.push({
+        id: Date.now(),
+        date: new Date().toLocaleDateString(),
+        items: [...cart],
+        total: totalPrice,
+        status: 'Processing'
+    });
+    
     showNotification('Order placed successfully!');
     
     cart = [];
@@ -947,6 +957,226 @@ function placeOrder(event) {
     document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
 }
 
+function handleLogin(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    
+    currentUser = {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: email,
+        phone: '+923079398190',
+        address: 'Karachi, Pakistan'
+    };
+    
+    showNotification('Welcome back! Login successful.');
+    
+    updateAuthUI();
+    document.getElementById('loginForm').reset();
+    
+    document.getElementById('login').classList.add('hidden');
+    document.getElementById('profile').classList.remove('hidden');
+    document.getElementById('profile').scrollIntoView({ behavior: 'smooth' });
+}
+
+function handleSignup(event) {
+    event.preventDefault();
+    
+    const firstName = document.getElementById('signupFirstName').value;
+    const lastName = document.getElementById('signupLastName').value;
+    const email = document.getElementById('signupEmail').value;
+    const phone = document.getElementById('signupPhone').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('signupConfirmPassword').value;
+    
+    if (password !== confirmPassword) {
+        showNotification('Passwords do not match!');
+        return;
+    }
+    
+    currentUser = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        address: ''
+    };
+    
+    showNotification('Account created successfully! Welcome to TechStore.');
+    
+    updateAuthUI();
+    document.getElementById('signupForm').reset();
+    
+    document.getElementById('signup').classList.add('hidden');
+    document.getElementById('profile').classList.remove('hidden');
+    document.getElementById('profile').scrollIntoView({ behavior: 'smooth' });
+}
+
+function handleLogout() {
+    currentUser = null;
+    
+    showNotification('Logged out successfully.');
+    
+    updateAuthUI();
+    
+    document.getElementById('profile').classList.add('hidden');
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+}
+
+function updateAuthUI() {
+    const loginBtn = document.getElementById('loginBtn');
+    const userBtn = document.getElementById('userBtn');
+    
+    if (currentUser) {
+        loginBtn.classList.add('hidden');
+        userBtn.classList.remove('hidden');
+        
+        document.getElementById('profileName').textContent = `${currentUser.firstName} ${currentUser.lastName}`;
+        document.getElementById('profileEmail').textContent = currentUser.email;
+        document.getElementById('totalOrders').textContent = userOrders.length;
+        document.getElementById('wishlistCount').textContent = wishlist.length;
+        
+        document.getElementById('settingsFirstName').value = currentUser.firstName;
+        document.getElementById('settingsLastName').value = currentUser.lastName;
+        document.getElementById('settingsEmail').value = currentUser.email;
+        document.getElementById('settingsPhone').value = currentUser.phone;
+        document.getElementById('settingsAddress').value = currentUser.address || '';
+    } else {
+        loginBtn.classList.remove('hidden');
+        userBtn.classList.add('hidden');
+    }
+}
+
+function handleProfileTabClick(event) {
+    event.preventDefault();
+    
+    const tabName = event.currentTarget.dataset.tab;
+    
+    document.querySelectorAll('.profile-nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    event.currentTarget.classList.add('active');
+    
+    document.querySelectorAll('.profile-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    document.getElementById(`${tabName}Tab`).classList.add('active');
+    
+    if (tabName === 'wishlist') {
+        renderWishlistProducts();
+    }
+}
+
+function renderWishlistProducts() {
+    const wishlistGrid = document.getElementById('wishlistGrid');
+    
+    if (wishlist.length === 0) {
+        wishlistGrid.innerHTML = `
+            <div class="empty-cart">
+                <i class="fas fa-heart"></i>
+                <h3>Your wishlist is empty</h3>
+                <p>Start adding products you love!</p>
+                <a href="#products" class="btn btn-primary">Browse Products</a>
+            </div>
+        `;
+    } else {
+        const wishlistProducts = products.filter(product => wishlist.includes(product.id));
+        wishlistGrid.innerHTML = wishlistProducts.map(product => `
+            <div class="product-card">
+                <div class="product-actions">
+                    <button class="product-action-btn wishlisted" onclick="toggleWishlist(${product.id}); renderWishlistProducts()">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="product-action-btn" onclick="openQuickView(${product.id})">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</span>
+                    <h3 class="product-title">${product.name}</h3>
+                    <div class="product-price">$${product.price.toLocaleString()}</div>
+                    <button class="add-to-cart" onclick="addToCart(${product.id})">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        `).join('');
+    }
+}
+
+function handleSettingsSave(event) {
+    event.preventDefault();
+    
+    const firstName = document.getElementById('settingsFirstName').value;
+    const lastName = document.getElementById('settingsLastName').value;
+    const email = document.getElementById('settingsEmail').value;
+    const phone = document.getElementById('settingsPhone').value;
+    const address = document.getElementById('settingsAddress').value;
+    
+    currentUser = {
+        ...currentUser,
+        firstName,
+        lastName,
+        email,
+        phone,
+        address
+    };
+    
+    showNotification('Settings saved successfully!');
+    
+    updateAuthUI();
+}
+
+function handleSearch() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    
+    if (searchTerm.length < 2) {
+        renderProducts();
+        return;
+    }
+    
+    const filtered = products.filter(product => {
+        return product.name.toLowerCase().includes(searchTerm) ||
+               product.brand.toLowerCase().includes(searchTerm) ||
+               product.category.toLowerCase().includes(searchTerm);
+    });
+    
+    renderProducts(filtered);
+}
+
+function showWishlistSection() {
+    document.getElementById('wishlist').classList.remove('hidden');
+    document.getElementById('wishlist').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showLoginSection() {
+    document.getElementById('login').classList.remove('hidden');
+    document.getElementById('login').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showSignupSection() {
+    document.getElementById('signup').classList.remove('hidden');
+    document.getElementById('signup').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showProfileSection() {
+    if (!currentUser) {
+        showNotification('Please login first!');
+        showLoginSection();
+        return;
+    }
+    
+    document.getElementById('profile').classList.remove('hidden');
+    document.getElementById('profile').scrollIntoView({ behavior: 'smooth' });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     updateCartUI();
@@ -954,16 +1184,53 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('priceRange').addEventListener('input', (e) => {
         document.getElementById('priceValue').textContent = `$${e.target.value}`;
-        applyFilters();
     });
     
-    document.getElementById('sortSelect').addEventListener('change', applyFilters);
+    document.getElementById('sortSelect').addEventListener('change', () => {
+        handleSearch();
+    });
     
     document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', applyFilters);
+        checkbox.addEventListener('change', () => {
+            handleSearch();
+        });
     });
     
-    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    document.getElementById('searchInput').addEventListener('input', handleSearch);
+    
+    document.getElementById('searchBtn').addEventListener('click', handleSearch);
+    
+    document.getElementById('loginBtn').addEventListener('click', showLoginSection);
+    
+    document.getElementById('userBtn').addEventListener('click', showProfileSection);
+    
+    document.getElementById('wishlistBtn').addEventListener('click', showWishlistSection);
+    
+    document.getElementById('loginForm').addEventListener('submit', handleLogin);
+    
+    document.getElementById('signupForm').addEventListener('submit', handleSignup);
+    
+    document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+    
+    document.getElementById('settingsForm').addEventListener('submit', handleSettingsSave);
+    
+    document.querySelectorAll('.profile-nav-link').forEach(link => {
+        link.addEventListener('click', handleProfileTabClick);
+    });
+    
+    document.querySelectorAll('a[href="#login"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            showLoginSection();
+        });
+    });
+    
+    document.querySelectorAll('a[href="#signup"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSignupSection();
+        });
+    });
     
     document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
     
