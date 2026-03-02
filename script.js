@@ -12,7 +12,8 @@ const products = [
             storage: "512GB SSD",
             display: "16.2\" Liquid Retina XDR"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ const products = [
             storage: "256GB SSD",
             display: "15.3\" Liquid Retina"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 3,
@@ -42,7 +44,8 @@ const products = [
             storage: "1TB SSD",
             display: "15.6\" OLED"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 4,
@@ -57,7 +60,8 @@ const products = [
             storage: "2TB SSD",
             display: "18\" QHD+ 480Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 5,
@@ -72,7 +76,8 @@ const products = [
             storage: "1TB SSD",
             display: "16\" 165Hz QHD+"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 6,
@@ -87,7 +92,8 @@ const products = [
             storage: "512GB SSD",
             display: "14\" OLED"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 7,
@@ -102,7 +108,8 @@ const products = [
             storage: "512GB SSD",
             display: "14\" WUXGA"
         },
-        icon: "fa-briefcase"
+        icon: "fa-briefcase",
+        availability: "instock"
     },
     {
         id: 8,
@@ -117,7 +124,8 @@ const products = [
             storage: "1TB SSD",
             display: "16\" WQXGA 165Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 9,
@@ -132,7 +140,8 @@ const products = [
             storage: "1TB SSD",
             display: "13.5\" OLED 3K2K"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 10,
@@ -147,7 +156,8 @@ const products = [
             storage: "1TB SSD",
             display: "16.1\" QHD 165Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 11,
@@ -162,7 +172,8 @@ const products = [
             storage: "2TB SSD",
             display: "17.3\" 4K 144Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "preorder"
     },
     {
         id: 12,
@@ -177,7 +188,8 @@ const products = [
             storage: "1TB SSD",
             display: "14\" QHD+"
         },
-        icon: "fa-briefcase"
+        icon: "fa-briefcase",
+        availability: "instock"
     },
     {
         id: 13,
@@ -192,7 +204,8 @@ const products = [
             storage: "1TB SSD",
             display: "15.6\" QHD 240Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 14,
@@ -207,7 +220,8 @@ const products = [
             storage: "1TB SSD",
             display: "14\" QHD 165Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 15,
@@ -222,7 +236,8 @@ const products = [
             storage: "512GB SSD",
             display: "13.5\" PixelSense"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 16,
@@ -237,7 +252,8 @@ const products = [
             storage: "256GB SSD",
             display: "13\" PixelSense Flow"
         },
-        icon: "fa-tablet-alt"
+        icon: "fa-tablet-alt",
+        availability: "instock"
     },
     {
         id: 17,
@@ -252,7 +268,8 @@ const products = [
             storage: "512GB SSD",
             display: "14\" FHD+"
         },
-        icon: "fa-briefcase"
+        icon: "fa-briefcase",
+        availability: "instock"
     },
     {
         id: 18,
@@ -267,7 +284,8 @@ const products = [
             storage: "1TB SSD",
             display: "16\" WUXGA"
         },
-        icon: "fa-briefcase"
+        icon: "fa-briefcase",
+        availability: "instock"
     },
     {
         id: 19,
@@ -282,7 +300,8 @@ const products = [
             storage: "1TB SSD",
             display: "17\" WQXGA"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 20,
@@ -297,7 +316,8 @@ const products = [
             storage: "512GB SSD",
             display: "14\" AMOLED"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 21,
@@ -312,7 +332,8 @@ const products = [
             storage: "512GB SSD",
             display: "14\" FHD"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 22,
@@ -327,7 +348,8 @@ const products = [
             storage: "256GB SSD",
             display: "14\" FHD"
         },
-        icon: "fa-briefcase"
+        icon: "fa-briefcase",
+        availability: "instock"
     },
     {
         id: 23,
@@ -342,7 +364,8 @@ const products = [
             storage: "512GB SSD",
             display: "15.6\" FHD"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 24,
@@ -357,7 +380,8 @@ const products = [
             storage: "512GB SSD",
             display: "16\" FHD+"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 25,
@@ -372,7 +396,8 @@ const products = [
             storage: "512GB SSD",
             display: "15.6\" FHD"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 26,
@@ -387,7 +412,8 @@ const products = [
             storage: "512GB SSD",
             display: "15.6\" FHD 165Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 27,
@@ -402,7 +428,8 @@ const products = [
             storage: "512GB SSD",
             display: "15.6\" FHD 144Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 28,
@@ -417,7 +444,8 @@ const products = [
             storage: "512GB SSD",
             display: "15.6\" FHD 144Hz"
         },
-        icon: "fa-gamepad"
+        icon: "fa-gamepad",
+        availability: "instock"
     },
     {
         id: 29,
@@ -432,7 +460,8 @@ const products = [
             storage: "1TB SSD",
             display: "13.9\" 3K"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     },
     {
         id: 30,
@@ -447,21 +476,33 @@ const products = [
             storage: "256GB SSD",
             display: "13.6\" Liquid Retina"
         },
-        icon: "fa-laptop"
+        icon: "fa-laptop",
+        availability: "instock"
     }
 ];
 
 let cart = [];
+let wishlist = [];
+let currentView = 'grid';
 
-function renderProducts(filter = 'all') {
+function renderProducts(filteredProducts = products) {
     const productsGrid = document.getElementById('productsGrid');
-    const filteredProducts = filter === 'all' 
-        ? products 
-        : products.filter(p => p.category === filter);
+    const resultsCount = document.getElementById('resultsCount');
+    
+    resultsCount.textContent = filteredProducts.length;
     
     productsGrid.innerHTML = filteredProducts.map(product => `
         <div class="product-card" data-category="${product.category}">
+            <div class="product-actions">
+                <button class="product-action-btn ${wishlist.includes(product.id) ? 'wishlisted' : ''}" onclick="toggleWishlist(${product.id})">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" onclick="openQuickView(${product.id})">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
             <div class="product-image">
+                ${product.availability === 'preorder' ? '<span class="product-badge">Pre-Order</span>' : ''}
                 <img src="${product.image}" alt="${product.name}" loading="lazy">
             </div>
             <div class="product-info">
@@ -492,6 +533,57 @@ function renderProducts(filter = 'all') {
             </div>
         </div>
     `).join('');
+}
+
+function applyFilters() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const maxPrice = parseInt(document.getElementById('priceRange').value);
+    const selectedCategories = getCheckedValues('category');
+    const selectedBrands = getCheckedValues('brand');
+    const selectedRAM = getCheckedValues('ram');
+    const selectedStorage = getCheckedValues('storage');
+    const selectedAvailability = getCheckedValues('availability');
+    
+    let filtered = products.filter(product => {
+        const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
+                              product.brand.toLowerCase().includes(searchTerm) ||
+                              product.category.toLowerCase().includes(searchTerm);
+        const matchesPrice = product.price <= maxPrice;
+        const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
+        const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
+        const matchesRAM = selectedRAM.length === 0 || selectedRAM.some(ram => product.specs.ram.includes(ram));
+        const matchesStorage = selectedStorage.length === 0 || selectedStorage.some(storage => product.specs.storage.includes(storage));
+        const matchesAvailability = selectedAvailability.length === 0 || selectedAvailability.includes(product.availability);
+        
+        return matchesSearch && matchesPrice && matchesCategory && matchesBrand && matchesRAM && matchesStorage && matchesAvailability;
+    });
+    
+    const sortBy = document.getElementById('sortSelect').value;
+    filtered = sortProducts(filtered, sortBy);
+    
+    renderProducts(filtered);
+}
+
+function getCheckedValues(filterType) {
+    const checkboxes = document.querySelectorAll(`input[data-filter="${filterType}"]:checked`);
+    return Array.from(checkboxes).map(cb => cb.value);
+}
+
+function sortProducts(products, sortBy) {
+    switch(sortBy) {
+        case 'price-low':
+            return [...products].sort((a, b) => a.price - b.price);
+        case 'price-high':
+            return [...products].sort((a, b) => b.price - a.price);
+        case 'name-asc':
+            return [...products].sort((a, b) => a.name.localeCompare(b.name));
+        case 'name-desc':
+            return [...products].sort((a, b) => b.name.localeCompare(a.name));
+        case 'newest':
+            return [...products].reverse();
+        default:
+            return products;
+    }
 }
 
 function addToCart(productId) {
@@ -525,21 +617,134 @@ function updateQuantity(productId, change) {
     }
 }
 
+function toggleWishlist(productId) {
+    const index = wishlist.indexOf(productId);
+    if (index > -1) {
+        wishlist.splice(index, 1);
+        showNotification('Removed from wishlist');
+    } else {
+        wishlist.push(productId);
+        showNotification('Added to wishlist');
+    }
+    updateWishlistUI();
+    renderProducts(getCurrentFilteredProducts());
+}
+
+function updateWishlistUI() {
+    const wishlistCount = document.querySelector('.wishlist-count');
+    wishlistCount.textContent = wishlist.length;
+}
+
+function getCurrentFilteredProducts() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const maxPrice = parseInt(document.getElementById('priceRange').value);
+    const selectedCategories = getCheckedValues('category');
+    const selectedBrands = getCheckedValues('brand');
+    const selectedRAM = getCheckedValues('ram');
+    const selectedStorage = getCheckedValues('storage');
+    const selectedAvailability = getCheckedValues('availability');
+    
+    return products.filter(product => {
+        const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
+                              product.brand.toLowerCase().includes(searchTerm) ||
+                              product.category.toLowerCase().includes(searchTerm);
+        const matchesPrice = product.price <= maxPrice;
+        const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
+        const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
+        const matchesRAM = selectedRAM.length === 0 || selectedRAM.some(ram => product.specs.ram.includes(ram));
+        const matchesStorage = selectedStorage.length === 0 || selectedStorage.some(storage => product.specs.storage.includes(storage));
+        const matchesAvailability = selectedAvailability.length === 0 || selectedAvailability.includes(product.availability);
+        
+        return matchesSearch && matchesPrice && matchesCategory && matchesBrand && matchesRAM && matchesStorage && matchesAvailability;
+    });
+}
+
+function openQuickView(productId) {
+    const product = products.find(p => p.id === productId);
+    const modal = document.getElementById('quickViewModal');
+    const content = document.getElementById('quickViewContent');
+    
+    content.innerHTML = `
+        <div class="quick-view-grid">
+            <div class="quick-view-image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="quick-view-details">
+                <span class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</span>
+                <h2>${product.name}</h2>
+                <div class="product-price">$${product.price.toLocaleString()}</div>
+                <div class="product-specs">
+                    <div class="product-spec">
+                        <i class="fas fa-microchip"></i>
+                        <span>${product.specs.processor}</span>
+                    </div>
+                    <div class="product-spec">
+                        <i class="fas fa-memory"></i>
+                        <span>${product.specs.ram}</span>
+                    </div>
+                    <div class="product-spec">
+                        <i class="fas fa-hdd"></i>
+                        <span>${product.specs.storage}</span>
+                    </div>
+                    <div class="product-spec">
+                        <i class="fas fa-desktop"></i>
+                        <span>${product.specs.display}</span>
+                    </div>
+                </div>
+                <div class="quick-view-actions">
+                    <button class="btn btn-primary" onclick="addToCart(${product.id}); closeModal()">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                    <button class="btn btn-outline" onclick="toggleWishlist(${product.id}); openQuickView(${product.id})">
+                        <i class="fas fa-heart"></i> ${wishlist.includes(product.id) ? 'Remove from Wishlist' : 'Add to Wishlist'}
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    modal.classList.add('active');
+}
+
+function closeModal() {
+    const modal = document.getElementById('quickViewModal');
+    modal.classList.remove('active');
+}
+
+function clearAllFilters() {
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.getElementById('priceRange').value = 4000;
+    document.getElementById('priceValue').textContent = '$4000';
+    document.getElementById('searchInput').value = '';
+    document.getElementById('sortSelect').value = 'default';
+    renderProducts();
+}
+
 function updateCartUI() {
     const cartItems = document.getElementById('cartItems');
     const cartCount = document.querySelector('.cart-count');
     const subtotal = document.getElementById('subtotal');
+    const tax = document.getElementById('tax');
     const total = document.getElementById('total');
     
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const taxAmount = totalPrice * 0;
     
     cartCount.textContent = totalItems;
     subtotal.textContent = `$${totalPrice.toLocaleString()}`;
+    tax.textContent = `$${taxAmount.toLocaleString()}`;
     total.textContent = `$${totalPrice.toLocaleString()}`;
     
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+        cartItems.innerHTML = `
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="#products" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        `;
     } else {
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item">
@@ -567,8 +772,11 @@ function updateCartUI() {
 
 function updateOrderReview() {
     const orderReviewItems = document.getElementById('orderReviewItems');
+    const reviewSubtotal = document.getElementById('reviewSubtotal');
+    const reviewTax = document.getElementById('reviewTax');
     const reviewTotal = document.getElementById('reviewTotal');
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const taxAmount = totalPrice * 0;
     
     orderReviewItems.innerHTML = cart.map(item => `
         <div class="review-item">
@@ -577,6 +785,8 @@ function updateOrderReview() {
         </div>
     `).join('');
     
+    reviewSubtotal.textContent = `$${totalPrice.toLocaleString()}`;
+    reviewTax.textContent = `$${taxAmount.toLocaleString()}`;
     reviewTotal.textContent = `$${totalPrice.toLocaleString()}`;
 }
 
@@ -591,10 +801,47 @@ function showNotification(message) {
     }, 3000);
 }
 
+function getPaymentInfo(paymentMethod) {
+    const paymentMethods = {
+        jazzcash: {
+            name: 'JazzCash',
+            details: 'Account: 0300-1234567 (JazzCash)'
+        },
+        easypaisa: {
+            name: 'EasyPaisa',
+            details: 'Account: 0345-7654321 (EasyPaisa)'
+        },
+        bank: {
+            name: 'Bank Transfer',
+            details: 'Bank: HBL\nAccount Title: TechStore\nAccount Number: 1234-5678-9012'
+        },
+        card: {
+            name: 'Credit/Debit Card',
+            details: 'Payment will be processed upon order confirmation'
+        }
+    };
+    return paymentMethods[paymentMethod] || paymentMethods.jazzcash;
+}
+
+function updatePaymentDetails() {
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+    const paymentDetails = document.getElementById('paymentDetails');
+    const paymentInfo = getPaymentInfo(paymentMethod);
+    
+    paymentDetails.innerHTML = `
+        <div class="payment-info-box">
+            <h5>Payment Information:</h5>
+            <p>${paymentInfo.details.replace(/\n/g, '<br>')}</p>
+        </div>
+    `;
+}
+
 function generateWhatsAppMessage(orderData) {
     const items = orderData.items.map(item => 
         `• ${item.name} x${item.quantity} - $${(item.price * item.quantity).toLocaleString()}`
     ).join('\n');
+    
+    const paymentInfo = getPaymentInfo(orderData.paymentMethod);
     
     const message = `🛒 *NEW ORDER - TECHSTORE*
 
@@ -608,6 +855,9 @@ Address: ${orderData.address}
 ${items}
 
 💰 *Total: $${orderData.total.toLocaleString()}*
+
+💳 *Payment Method:* ${paymentInfo.name}
+${paymentInfo.details}
 
 📝 *Notes:* ${orderData.notes || 'None'}
 
@@ -625,6 +875,8 @@ function generateEmailBody(orderData) {
         `${item.name} x${item.quantity} - $${(item.price * item.quantity).toLocaleString()}`
     ).join('\n');
     
+    const paymentInfo = getPaymentInfo(orderData.paymentMethod);
+    
     return `NEW ORDER - TECHSTORE
 
 Customer Details:
@@ -640,6 +892,9 @@ ${items}
 
 Total: $${orderData.total.toLocaleString()}
 
+Payment Method: ${paymentInfo.name}
+${paymentInfo.details}
+
 Notes: ${orderData.notes || 'None'}
 
 Thank you for your order!`;
@@ -648,23 +903,26 @@ Thank you for your order!`;
 function placeOrder(event) {
     event.preventDefault();
     
-    const name = document.getElementById('name').value;
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const address = document.getElementById('address').value;
     const notes = document.getElementById('notes').value;
     const orderMethod = document.querySelector('input[name="orderMethod"]:checked').value;
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
     
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
     const orderData = {
-        name,
+        name: `${firstName} ${lastName}`,
         email,
         phone,
         address,
         notes,
         items: cart,
-        total: totalPrice
+        total: totalPrice,
+        paymentMethod
     };
     
     if (orderMethod === 'whatsapp') {
@@ -692,13 +950,34 @@ function placeOrder(event) {
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     updateCartUI();
+    updateWishlistUI();
     
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            renderProducts(button.dataset.filter);
+    document.getElementById('priceRange').addEventListener('input', (e) => {
+        document.getElementById('priceValue').textContent = `$${e.target.value}`;
+        applyFilters();
+    });
+    
+    document.getElementById('sortSelect').addEventListener('change', applyFilters);
+    
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+    });
+    
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    
+    document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+    
+    document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentView = btn.dataset.view;
+            const productsGrid = document.getElementById('productsGrid');
+            if (currentView === 'list') {
+                productsGrid.classList.add('list-view');
+            } else {
+                productsGrid.classList.remove('list-view');
+            }
         });
     });
     
@@ -720,6 +999,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('orderForm').addEventListener('submit', placeOrder);
     
+    const paymentOptions = document.querySelectorAll('input[name="paymentMethod"]');
+    paymentOptions.forEach(option => {
+        option.addEventListener('change', updatePaymentDetails);
+    });
+    updatePaymentDetails();
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -730,32 +1015,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const filteredProducts = products.filter(product => 
-            product.name.toLowerCase().includes(searchTerm) ||
-            product.brand.toLowerCase().includes(searchTerm) ||
-            product.category.toLowerCase().includes(searchTerm)
-        );
-        renderFilteredProducts(filteredProducts);
-    });
-    
     const brandCards = document.querySelectorAll('.brand-card');
     brandCards.forEach(card => {
         card.addEventListener('click', () => {
             const brand = card.dataset.brand;
-            const filteredProducts = products.filter(product => product.brand === brand);
-            renderFilteredProducts(filteredProducts);
+            document.querySelectorAll('input[data-filter="brand"]').forEach(cb => {
+                cb.checked = cb.value === brand;
+            });
+            applyFilters();
             document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
         });
     });
     
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const mainNavLinks = document.querySelector('.main-nav-links');
     
     mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        mainNavLinks.classList.toggle('active');
+    });
+    
+    document.getElementById('closeQuickView').addEventListener('click', closeModal);
+    
+    document.getElementById('quickViewModal').addEventListener('click', (e) => {
+        if (e.target.id === 'quickViewModal') {
+            closeModal();
+        }
     });
     
     const contactForm = document.querySelector('.contact-form');
@@ -772,40 +1056,3 @@ document.addEventListener('DOMContentLoaded', () => {
         newsletterForm.reset();
     });
 });
-
-function renderFilteredProducts(filteredProducts) {
-    const productsGrid = document.getElementById('productsGrid');
-    productsGrid.innerHTML = filteredProducts.map(product => `
-        <div class="product-card" data-category="${product.category}">
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}" loading="lazy">
-            </div>
-            <div class="product-info">
-                <span class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</span>
-                <h3 class="product-title">${product.name}</h3>
-                <div class="product-specs">
-                    <div class="product-spec">
-                        <i class="fas fa-microchip"></i>
-                        <span>${product.specs.processor}</span>
-                    </div>
-                    <div class="product-spec">
-                        <i class="fas fa-memory"></i>
-                        <span>${product.specs.ram}</span>
-                    </div>
-                    <div class="product-spec">
-                        <i class="fas fa-hdd"></i>
-                        <span>${product.specs.storage}</span>
-                    </div>
-                    <div class="product-spec">
-                        <i class="fas fa-desktop"></i>
-                        <span>${product.specs.display}</span>
-                    </div>
-                </div>
-                <div class="product-price">$${product.price.toLocaleString()}</div>
-                <button class="add-to-cart" onclick="addToCart(${product.id})">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
-            </div>
-        </div>
-    `).join('');
-}
