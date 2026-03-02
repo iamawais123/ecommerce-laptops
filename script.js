@@ -798,9 +798,24 @@ function showNotification(message) {
     notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
     document.body.appendChild(notification);
     
+    console.log('File Location:', window.location.href);
+    console.log('Current Path:', window.location.pathname);
+    
     setTimeout(() => {
         notification.remove();
     }, 3000);
+}
+
+function showFileLocation(element) {
+    const filePath = element.getAttribute('src') || element.getAttribute('href');
+    const fileName = element.textContent || element.innerText;
+    
+    alert(`File: ${fileName}\nLocation: ${filePath}\nFull Path: ${window.location.origin}${window.location.pathname}`);
+}
+
+function handleButtonClick(event) {
+    const button = event.currentTarget;
+    showFileLocation(button);
 }
 
 function getPaymentInfo(paymentMethod) {
@@ -1233,6 +1248,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+    
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+    
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+    
+    document.querySelectorAll('.product-action-btn').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+    
+    document.querySelectorAll('.quantity-btn').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+    
+    document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
     
     document.querySelectorAll('.view-btn').forEach(btn => {
         btn.addEventListener('click', () => {

@@ -304,6 +304,7 @@ body {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 14px 32px;
     border: none;
@@ -313,6 +314,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: var(--transition);
+    margin: 0 auto;
 }
 
 .btn-primary {
