@@ -1168,17 +1168,20 @@ function handleSearch() {
 
 function showWishlistSection() {
     document.getElementById('wishlist').classList.remove('hidden');
-    document.getElementById('wishlist').scrollIntoView({ behavior: 'smooth' });
+    const wishlistSection = document.getElementById('wishlist');
+    wishlistSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function showLoginSection() {
     document.getElementById('login').classList.remove('hidden');
-    document.getElementById('login').scrollIntoView({ behavior: 'smooth' });
+    const loginSection = document.getElementById('login');
+    loginSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function showSignupSection() {
     document.getElementById('signup').classList.remove('hidden');
-    document.getElementById('signup').scrollIntoView({ behavior: 'smooth' });
+    const signupSection = document.getElementById('signup');
+    signupSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function showProfileSection() {
@@ -1189,7 +1192,8 @@ function showProfileSection() {
     }
     
     document.getElementById('profile').classList.remove('hidden');
-    document.getElementById('profile').scrollIntoView({ behavior: 'smooth' });
+    const profileSection = document.getElementById('profile');
+    profileSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
